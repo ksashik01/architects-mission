@@ -27,6 +27,7 @@ header
     height: auto;
     margin-bottom: 100px;
     padding-bottom: 50px;
+    width: 100%;
     
 }
 .topheader
@@ -323,9 +324,6 @@ color: black;
   transform: rotate(360deg);
 }
 
-
-
-
 .project-catgory h3 
 {
     color: #424242;
@@ -393,5 +391,35 @@ font-size: 12px;
     padding: 20px 0;
     color: #424242;
     margin-bottom: 100px;
-;
+
 }
+.copy-right
+{
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 576px) {
+  header {
+    width: 100%;
+  }
+  .topheader
+  {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    gap:15px;
+    
+  }
+  .menu
+  {
+    flex-direction: column;
+  }
+}
+
+
+   
+
+
+
+
+    
