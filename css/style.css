@@ -133,7 +133,7 @@ border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 10px;
-    background-color: #FF900E;
+    background-color: #977b5a;
 }
 .our-team-person img 
 {
