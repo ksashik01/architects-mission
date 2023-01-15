@@ -164,7 +164,9 @@ color:#727272;
 .title-discription
 {
     margin: 20px 0px 40px;
+     font-size: 14px;
 }
+
 
 .header-btn a{
     font-size: 14px;
@@ -178,28 +180,46 @@ color:#727272;
     width: 1000px;
     margin: 50px auto;
     height: auto;
-    gap:50px
-    
-}
+    gap:50px;
+ }
+
 .left-container
 {
-    width: 50%;
-     height: 2px;
+    width: 40%;
 }
 
-
-
-
+.architects-title
+{
+    border-left: 3px solid rgb(255, 145, 0);
+}
+.architects-title h2
+{
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
 .architects-picture
 {
     width: 50%;
-    height: 50%;
-   
- 
+    
 }
 .architects-picture img 
 {
     width: 100%;
    height: 100%;
-    
+}
+.discription-title p 
+{
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.service
+{
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+.service p 
+{
+    font-size: 14px;
 }
