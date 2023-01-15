@@ -562,3 +562,18 @@ margin-right: 20px;
     width: 500px;
     text-align: center;
 }
+.architects-picture
+{
+    width: 50%;
+}
+.architects-picture img 
+{
+    width: 100%;
+}
+
+.our-architects
+{
+    width: 600px;
+    flex-direction: column;
+
+}
