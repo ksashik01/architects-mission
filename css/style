@@ -1,0 +1,142 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+   
+}
+
+body 
+{font-family: 'Poppins', sans-serif;
+}
+h1 
+{
+font-family: Work Sans;
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+/* -----------header-start------------------ */
+header
+{
+    background-color:#ff8f0e27;
+    height: auto;
+    margin-bottom: 100px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+.topheader
+{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.left-menu{
+    color: #131313;
+}
+
+.menu {
+    display: flex;
+    gap:40px;}
+
+.menu li a 
+{
+text-decoration: none;
+font-size: 18px;
+color: #424242;
+}
+
+.menu-list li a:hover
+{
+border-bottom: 1px solid rgb(255, 145, 0);
+border-top: 1px solid rgb(255, 145, 0);}
+
+/* ----------------------header-Content Start------------------ */
+.header-content
+{
+     width: 1000px;
+   margin: 100px auto 50px;
+}
+.header-title
+{
+    width: 600px;
+     margin:0 auto;
+    text-align: center;
+}
+.header-title h1,h2
+{
+font-size: 60px;
+line-height: 1.2;
+
+}
+.header-title p 
+{
+    margin: 15px 0px;
+}
+
+
+.header-btn
+{
+padding: 17px 22px;
+margin-top:20px;
+background-color:#FF900E;
+color: white;
+border: none;
+border-radius: 5px;
+}
+.header-btn a 
+{
+    color: white;
+}
+.header-btn:hover 
+{
+    background-color: blue;
+}
+
+.banner
+{
+    background-image: url(../images/banner-min.png);
+    width:1200px;
+    height: 500px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin:0px auto;
+}
+-------our feauter perso ----------
+.project
+{
+    width: 100%;
+    
+}
+
+
+.our-team
+{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row-reverse;
+    width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+
+.our-team-person
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    background-color: #FF900E;
+}
+.our-team-person img 
+{
+ width: 250px;
+ height: 250px;
+}
