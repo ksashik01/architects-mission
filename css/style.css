@@ -477,6 +477,7 @@ font-size: 12px;
 @media only screen and (max-width: 576px) {
   header {
     width: 100%;
+    overflow: hidden;
   }
   .topheader
   {
@@ -490,4 +491,8 @@ font-size: 12px;
   {
     flex-direction: column;
   }
-
+.header-title h1, h2
+{
+    
+}
+}
