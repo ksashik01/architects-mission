@@ -477,7 +477,7 @@ font-size: 12px;
 @media only screen and (max-width: 576px) {
   header {
     width: 100%;
-    overflow: hidden;
+    
   }
   .topheader
   {
@@ -490,9 +490,71 @@ font-size: 12px;
   .menu
   {
     flex-direction: column;
+    gap:25px
   }
 .header-title h1, h2
 {
-    
+    font-size: 35px;
+
 }
+.header-content { 
+    width: 400px;
+    margin: 50px auto 35px}
+
+    .header-title {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;}
+
+.banner
+{
+    width: 500px;
+    height: 300px;
+}
+
+.our-team
+{
+    flex-direction: column;
+    width: 500px;
+}
+
+.project-name
+{
+flex-direction: column;
+width: 400px;
+justify-content: flex-start;
+margin-right: 20px;
+}
+.left-container
+{
+    width: 50%;
+    margin: 0px 40px;
+}
+.project-title {
+    margin: 0 50px;
+}
+.sponspors-details
+{
+    width: 500px;
+}
+.sponsporS-list
+{
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sponsporS-list
+{
+    flex-direction: column;
+    width: 500px;
+}
+.container
+{
+    flex-direction: column;
+    width: 350px;
+}
+.copy-right
+{
+    width: 500px;
+    text-align: center;
 }
