@@ -264,3 +264,134 @@ padding: 15px 10px;
     color: white;
     
 }
+
+/* -------------project-complete top--------------- */
+
+.project-complete
+{
+    width: 100%;
+    margin: 150px 0px;
+
+}
+
+.project-list
+{
+    
+    width: 1000px;
+    margin: auto;
+}
+.project-title
+{
+    width: 400px;
+    margin-bottom: 50px;
+}
+.project-title h1 
+{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #131313;
+}
+.project-title p
+{
+font-size: 13px;
+color: black;
+}
+.project-name
+{
+    width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+}
+
+.project-catgory
+{
+    text-align: center;
+    border: 1px solid #FF900E;
+    padding: 10px;
+}
+.project-catgory img
+{
+    width: 40px;
+    height: 40px;
+}
+
+.project-catgory{
+  transition: transform .7s ease-in-out;
+}
+.project-catgory:hover {
+  transform: rotate(360deg);
+}
+
+
+
+
+.project-catgory h3 
+{
+    color: #424242;
+}
+.project-catgory p 
+{
+color: #727272
+;
+font-size: 12px;
+}
+
+/* -------company sponsor list top---------- */
+.sponspors-details
+{
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.sponspors
+{
+    text-align: center;
+    width: 400px;
+    margin: auto;
+}
+.sponspors h1 
+{
+    font-size: 40px;
+   color: #131313;
+}
+.sponspors p{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+.sponsporS-list img 
+{
+    width: 107px;
+    height: 45px;
+
+}
+.filter 
+
+    {
+        filter: grayscale(150%);
+    }
+
+.sponsporS-list
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ------Copy-right-section */
+.copy-right
+{
+    width: 1000px;
+    background-color: #FFF4E7;
+    margin: auto;
+    
+    text-align: center;
+    align-items: center;
+    padding: 20px 0;
+    color: #424242;
+    margin-bottom: 100px;
+;
+}
