@@ -254,7 +254,143 @@
 <p>um dolor sit amet consectetur adipisicing elit. Illo dignissimos neque inventore tempore enim suscipit? Illo dignissimos neque</p>
 <button>Read More</button>
 </div>
+__________________________________________________________________________________
+    
+    
+    
+    
+    <div className="'max-w-7xl mx-auto">
+            <h1 className="text-3xl text-center bg-green-300">what is access token and refresh token</h1>
+            <div>
+                <h2 className="text-2xl underline font-semibold">Access token:-</h2><br />
 
+                    <p>An access token is a tiny piece of code that contains a large amount of data. Information about the user, permissions, groups, and timeframes is embedded within one token that passes from a server to a user's device. 
+
+            Plenty of websites use access tokens. For example, if you've ever used credentials from one website (like Facebook) to gain entry to another website (like Salesforce), you've used an access token.</p>
+
+            <h3 className="text-2xl font-semibold">How Do Access Tokens Work?
+            </h3>
+            <li>Login: Use a known username and password to prove your identity. </li>
+            <li>Verification: The server authenticates the data and issues a token. </li>
+            <li>Storage: The token is sent to your browser for storage. </li>
+            <li>Communication: Each time you access something new on the server, your token is verified once more. </li>
+            <li>Deletion: When your session is over, the token is discarded. </li>
+            <li>Authorization: You agree to use your credentials from one site to enter another. </li>
+            <li>Connection: The first site connects the second and asks for help. The second site creates an access token. </li>
+            <li>Storage: The access token is stored in your browser. </li>
+            </div>
+
+            <div>
+            <h2 className="text-2xl underline font-semibold mt-6">Refresh token:-</h2><br />
+            </div>
+            <p>As mentioned, for security purposes, access tokens may be valid for a short amount of time. Once they expire, client applications can use a refresh token to "refresh" the access token. That is, a refresh token is a credential artifact that lets a client application get new access tokens without having to ask the user to log in again. <br /> <br />
+
+            The client application can get a new access token as long as the refresh token is valid and unexpired. Consequently, a refresh token that has a very long lifespan could theoretically give infinite power to the token bearer to get a new access token to access protected resources anytime. The bearer of the refresh token could be a legitimate user or a malicious user. As such, security companies, such as Auth0, create mechanisms to ensure that this powerful token is mainly held and used continuously by the intended parties.
+            
+             </p>
+        
+             <h3 className="text-2xl font-semibold">where should store refresh token?
+             
+            </h3>
+            <div className="space-y-4 mb-10">
+            <p>There are lots of questions/answers about this topic on SO, but regarding the refresh token the answer are not clear.
+
+            Access token and refresh token shouldn't be stored in the local/session storage, because they are not a place for any sensitive data. Hence I would store the access token in a httpOnly cookie (even though there is CSRF) and I need it for most of my requests to the Resource Server anyway.</p>
+
+            <p>1) Storing the refresh token in an in-memory JavaScript variable, which has two drawbacks:</p>
+            <li> It's vulnerable to XSS (but may be not as obvious as local/session storage</li>
+            <li>It looses the "session" if a user closes the browser tab</li>
+            <p>2. Storing the access token in session storage and sending it via a Bearer access_token authorization header to my resource server. Then I can use httpOnly cookies for the refresh token. This has one drawback that I can think of:</p>
+            <li>The refresh token is exposed to CSRF with every request made to the Resource Server.</li>
+            <p>3.Keep both tokens in httpOnly cookies which has the mentioned drawback that both tokens are exposed to the same attack vector.</p>
+            </div>
+
+            <h1 className="text-3xl text-center bg-green-300">Compare SQL and NoSQL databases?</h1>
+            <h2 className="text-2xl underline font-semibold mt-6">Compare SQL:-</h2><br />
+
+            <p>SQL Compare is a GUI tool to compare SQL Server databases. It will inspect the structural differences between the source and target databases, and present side-by-side differences in the SQL DDL code of each of the tables and code modules. It will generate a deployment script (a.k.a. a ‘1-way synchronization’  script or ‘migration’ script) that will update the target database to make its structure the same as the source, preserving the existing data wherever possible, and issuing a warning if it’s not. You can use SQL Compare’s options and filters to control how it does this comparison, and what objects in ignores.
+
+SQL Compare provides a command line interface (which may be subject to a different, automation-based license), both for Windows and Linux. It allows you to perform the comparisons and deployments as part of a scripted process. When used from the command line or script, SQL Compare can provide an HTML or Excel file as a report.</p>
+
+<h2 className="text-2xl underline font-semibold mt-6">NoSQL databases:-</h2><br />
+
+<p>The fundamental difference between SQL and NoSQL is not all that complicated. Each has a different philosophy for how data should be stored and retrieved.
+
+With SQL databases, all data has an inherent structure. A conventional database like Microsoft SQL Server, MySQL, PostgreSQL, or Oracle Database uses a schema—a formal definition of how data inserted into the database will be composed. For instance, a certain column in a table may be restricted to integers only. As a result, the data recorded in the column will have a high degree of normalization. The rigid schema of a SQL database also makes it relatively easy to perform aggregations on the data, for instance by combining data from two tables using the SQL JOIN command.
+
+With NoSQL, data can be stored in a schema-less or free-form fashion. Any data can be stored in any record. Among the NoSQL databases, you will find four common models for storing data, which lead to four common types of NoSQL systems:
+
+Nominations are open for the 2024 Best Places to Work in IT
+Document databases (e.g. MongoDB). Inserted data is stored in the form of schema-less JSON structures, or “documents,” where the data could be anything from integers to strings to free-form text. There is no inherent need to specify what fields, if any, a JSON document will contain.
+Key-value stores (e.g. Redis). Free-form values, from simple integers or strings to complex JSON documents, are accessed in the database by way of keys, such as strings.
+Wide column stores (e.g. Cassandra). Data is stored in columns instead of rows as in a conventional SQL system. Any number of columns (and therefore many different types of data) can be grouped or aggregated as needed for queries or data views.
+Graph databases (e.g. Neo4j). Data is represented as a network or graph of entities and their relationships, where each node in the graph is a free-form chunk of data.
+Schema-less data storage is useful in the following scenarios:
+
+You want fast access to the data, and you’re more concerned with speed and simplicity of access than reliable transactions or consistency.
+You’re storing a large volume of data, and you don’t want to lock yourself into a schema, as changing the schema later could be slow and painful.
+You’re taking in unstructured data from one or more sources, and you want to keep the data in its original form for maximum flexibility.
+You want to store data in a hierarchical structure, but you want those hierarchies to be described by the data itself, not an external schema. NoSQL allows data to be casually self-referential in ways that are more complex for SQL databases to emulate.</p>
+
+
+{/* What is express js and Nest Js? */}
+
+<h3 className="text-3xl text-center bg-green-300 mt-8">What is express js and Nest Js?</h3>
+<h2 className="text-2xl underline font-semibold mt-6">express js:-</h2><br />
+<p>Express.js is the most popular web framework for Node.js. It is designed for building web applications and APIs and has been called the de facto standard server framework for Node.js.
+
+Building a backend from-scratch for an application in Node.js can be tedious and time consuming. From setting up ports to route handlers, writing all of the boilerplate code takes away from what really matters, which is writing the business logic for an application. By using web frameworks like Express.js, developers can save time and focus on other important tasks</p>
+<h2 className="text-2xl underline font-semibold mt-6">Nest JS:-</h2><br />
+<p>Next.js is a React framework that gives you building blocks to create web applications.
+
+By framework, we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application. <br />
+
+Next.js is a React framework that gives you building blocks to create web applications.
+
+By framework, we mean Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for your application.
+
+</p>
+
+{/* What is MongoDB aggregate and how does it work? */}
+<div>
+
+
+<h3 className="text-3xl text-center bg-green-300 mt-8">What is MongoDB aggregate and how does it work?</h3>
+<h2 className="text-2xl underline font-semibold mt-6">MongoD Aggregate:-</h2><br />
+<p>Data can be processed in the application layer or in the database layer. Aggregation framework or pipeline is the manner in which MongoDB does data processing in the database layer. MongoDB's aggregation framework can do any kind of processing. Therefore it's really a Turing complete functional language.
+
+Often just retrieving data is inadequate. We wish to perform some computations on the data or report on live data. Sometimes we don't want to copy data and process it elsewhere. These are good reasons for using MongoDB's aggregations.
+
+While being flexible and intuitive for developers, MongoDB's aggregation is not as performant as some other databases or tools.</p>
+
+<h2 className="underline font-semibold mt-6">Aggregation Pipeline:-</h2><br />
+<li>We can think of data as moving along a multi-stage pipeline. Each stage does specific processing on the data. Among the basic stages are filters that obtain a subset of matching documents and transforms that reshape data into a suitable output form. Other stages do sorting, grouping, string concatenation, array processing, and so on. The aggregation pipeline can operate on a sharded collection. Some stages can use indexes for better performance.</li>
+<h2 className="underline font-semibold mt-6">Map-Reduce Function:-</h2><br />
+
+<li>This legacy approach was deprecated in MongoDB 5.0. Aggregation pipeline is now the preferred approach since it offers better performance and usability.</li>
+
+<h2 className="underline font-semibold mt-6">Single Purpose Aggregation Methods:-</h2><br />
+<li>From the Collection class, the methods estimatedDocumentCount(), count() and distinct() aggregate from a single collection. While handy, these lack the flexibility and capability of the aggregation pipeline.</li>
+
+</div>
+
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ______________________________________________________________
+    
+    
+    
+    
 
 </div>
 
